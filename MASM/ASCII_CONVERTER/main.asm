@@ -9,7 +9,6 @@ extern exit : proc
 .data
     format db "%s", 0
     txt dq 100 DUP(0)
-    result db 0
 
 .code
 
