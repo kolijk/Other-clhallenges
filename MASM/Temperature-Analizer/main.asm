@@ -43,12 +43,12 @@ main PROC
 
 
         LEA RCX, txt1
-        MOV EDX, [highestTemp]
+        MOV EDX, [highestTemp];Gorna wartosc RDX zostaje wyzerowana ponieważ wrzucam zmienna 32- bit (dd) do rejestru EDX 32 bit
         call printf
         
 
         LEA RCX, txt2
-        MOV EDX, [suma]
+        MOV EDX, [suma];Gorna wartosc RDX zostaje wyzerowana ponieważ wrzucam zmienna 32- bit (dd) do rejestru EDX 32 bit
         call printf
 
 
