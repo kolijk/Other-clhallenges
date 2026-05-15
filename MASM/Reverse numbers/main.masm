@@ -33,14 +33,14 @@ main PROC
     skip:
     MOV lengthTextEntered, RAX
 
-    LEA RBP, textEntered; Do wskaźnika RBP umieszczam adres początku zmiennej textEntered
-    ADD RBP, lengthTextEntered;Przesuwam wskaznik o ilosc bajtow wprowadzonych
-    SUB RBP, 1;Cofam wskaznik o 1 aby byl na ostatnim znaku
-    MOV R12, lengthTextEntered; Do rejestru R12 umieszczam wartosc dlugosc tekstu
+    LEA RBP, textEntered        ; Do wskaźnika RBP umieszczam adres początku zmiennej textEntered
+    ADD RBP, lengthTextEntered  ;Przesuwam wskaznik o ilosc bajtow wprowadzonych
+    SUB RBP, 1                  ;Cofam wskaznik o 1 aby byl na ostatnim znaku
+    MOV R12, lengthTextEntered  ; Do rejestru R12 umieszczam wartosc dlugosc tekstu
 
     anyway1:
 
-    MOV BYTE PTR[RBP + 1], 0;Zamieniam bajt na pozycji offset + 1 na bajt 0
+    MOV BYTE PTR[RBP + 1], 0    ;Zamieniam bajt na pozycji offset + 1 na bajt 0
 
     LEA RCX, formatS
     LEA RDX, [RBP]
